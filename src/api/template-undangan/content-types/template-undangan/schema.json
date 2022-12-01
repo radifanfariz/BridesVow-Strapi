@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "template_undangans",
+  "info": {
+    "singularName": "template-undangan",
+    "pluralName": "template-undangans",
+    "displayName": "Template-Undangan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama": {
+      "type": "string",
+      "unique": true
+    },
+    "Gambar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "TemplateID": {
+      "type": "uid"
+    },
+    "IsCreatorChoice": {
+      "type": "boolean"
+    },
+    "paket_undangan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::paket-undangan.paket-undangan",
+      "inversedBy": "template_undangans"
+    }
+  }
+}

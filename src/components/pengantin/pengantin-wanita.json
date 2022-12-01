@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_pengantin_pengantin_wanitas",
+  "info": {
+    "displayName": "Pengantin-Wanita",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Nama_Panggilan": {
+      "type": "string"
+    },
+    "Nama_Lengkap": {
+      "type": "string"
+    },
+    "Nama_Ayah": {
+      "type": "string"
+    },
+    "Nama_Ibu": {
+      "type": "string"
+    },
+    "Foto_Sendiri": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

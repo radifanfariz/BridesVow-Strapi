@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pengantin_hadiahs",
+  "info": {
+    "displayName": "Hadiah",
+    "icon": "gift"
+  },
+  "options": {},
+  "attributes": {
+    "Nama_Penerima": {
+      "type": "string"
+    },
+    "No_HP": {
+      "type": "string"
+    },
+    "Alamat_Penerima": {
+      "type": "text"
+    }
+  }
+}

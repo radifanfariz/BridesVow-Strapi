@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "konfirmasis",
+  "info": {
+    "singularName": "konfirmasi",
+    "pluralName": "konfirmasis",
+    "displayName": "Konfirmasi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama_Pemilik_Rekening": {
+      "type": "string"
+    },
+    "Nama_Pemesan": {
+      "type": "string"
+    },
+    "OrderID": {
+      "type": "uid"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "No_HP": {
+      "type": "string"
+    },
+    "Pesan": {
+      "type": "richtext"
+    },
+    "Bukti_Pembayaran": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_pengantin_acara_resepsis",
+  "info": {
+    "displayName": "Acara-Resepsi",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Waktu": {
+      "type": "datetime"
+    },
+    "Lokasi": {
+      "type": "string"
+    },
+    "URL_Lokasi": {
+      "type": "string"
+    },
+    "Iframe_Lokasi": {
+      "type": "text"
+    }
+  }
+}

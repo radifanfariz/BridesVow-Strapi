@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pemesanans",
+  "info": {
+    "singularName": "pemesanan",
+    "pluralName": "pemesanans",
+    "displayName": "Pemesanan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama": {
+      "type": "string"
+    },
+    "No_HP": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Kota": {
+      "type": "string"
+    },
+    "Alamat": {
+      "type": "text"
+    },
+    "template_undangan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::template-undangan.template-undangan"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_undangans",
+  "info": {
+    "singularName": "data-undangan",
+    "pluralName": "data-undangans",
+    "displayName": "Data-Undangan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Pengantin_Wanita": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.pengantin-wanita"
+    },
+    "Pengantin_Pria": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.pengantin-pria"
+    },
+    "Acara_Akad": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.acara-akad"
+    },
+    "Acara_Resepsi": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.acara-resepsi"
+    },
+    "Galeri_Foto": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.galeri-foto"
+    },
+    "Amplop": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pengantin.amplop"
+    },
+    "Hadiah": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.hadiah"
+    },
+    "Pelengkap": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.pelengkap"
+    },
+    "UndanganID": {
+      "type": "uid"
+    },
+    "pemesanan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pemesanan.pemesanan"
+    },
+    "template_undangan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::template-undangan.template-undangan"
+    },
+    "Slug": {
+      "type": "uid"
+    },
+    "Foto_Tambahan": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pengantin.foto-tambahan"
+    }
+  }
+}

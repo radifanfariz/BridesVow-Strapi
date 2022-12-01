@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paket_undangans",
+  "info": {
+    "singularName": "paket-undangan",
+    "pluralName": "paket-undangans",
+    "displayName": "Paket-Undangan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nama": {
+      "type": "string"
+    },
+    "Fitur": {
+      "type": "richtext"
+    },
+    "Harga": {
+      "type": "biginteger"
+    },
+    "template_undangans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::template-undangan.template-undangan",
+      "mappedBy": "paket_undangan"
+    }
+  }
+}

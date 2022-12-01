@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_pengantin_pelengkaps",
+  "info": {
+    "displayName": "Pelengkap",
+    "icon": "music",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "URL_Musik": {
+      "type": "string"
+    },
+    "Musik": {
+      "type": "enumeration",
+      "enum": [
+        "Give Me Your Forever - Zack Tabudlo",
+        "How Deep is Your Love - Bee Gees",
+        "Marry Your Daughter - BRKN RBTS",
+        "Just the Way You Are/ Marry You - Bruno Mars",
+        "Perfect - Ed Sheeran",
+        "I wanna grow old with you - Westlife"
+      ]
+    },
+    "Nama_AyatSuci": {
+      "type": "string"
+    },
+    "Isi_AyatSuci": {
+      "type": "text"
+    },
+    "Perjalanan_1": {
+      "type": "text"
+    },
+    "Perjalanan_2": {
+      "type": "text"
+    },
+    "Perjalanan_3": {
+      "type": "text"
+    }
+  }
+}

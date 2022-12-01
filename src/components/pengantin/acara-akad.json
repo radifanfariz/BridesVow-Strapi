@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pengantin_acara_akads",
+  "info": {
+    "displayName": "Acara-Akad",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Waktu": {
+      "type": "datetime"
+    },
+    "Lokasi": {
+      "type": "string"
+    }
+  }
+}
