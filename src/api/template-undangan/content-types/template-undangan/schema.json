@@ -38,6 +38,10 @@
       "relation": "manyToOne",
       "target": "api::paket-undangan.paket-undangan",
       "inversedBy": "template_undangans"
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }

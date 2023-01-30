@@ -31,6 +31,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::template-undangan.template-undangan"
+    },
+    "Total_Bayar": {
+      "type": "biginteger"
     }
   }
 }
