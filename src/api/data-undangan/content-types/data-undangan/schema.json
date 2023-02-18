@@ -52,7 +52,7 @@
       "repeatable": false,
       "component": "pengantin.pelengkap"
     },
-    "UndanganID": {
+    "OrderID": {
       "type": "uid"
     },
     "pemesanan": {

@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -34,6 +34,28 @@
     },
     "Total_Bayar": {
       "type": "biginteger"
+    },
+    "OrderID": {
+      "type": "uid",
+      "required": true
+    },
+    "Channel_Pembayaran": {
+      "type": "string"
+    },
+    "IsPaid": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Metode_Pembayaran": {
+      "type": "enumeration",
+      "enum": [
+        "va",
+        "qris"
+      ]
+    },
+    "Status": {
+      "type": "string"
     }
   }
 }

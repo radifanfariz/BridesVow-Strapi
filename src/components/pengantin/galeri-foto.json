@@ -2,19 +2,21 @@
   "collectionName": "components_pengantin_galeri_fotos",
   "info": {
     "displayName": "Galeri-Foto",
-    "icon": "camera"
+    "icon": "camera",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Foto": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
