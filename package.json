@@ -18,7 +18,7 @@
     "@strapi/provider-upload-cloudinary": "^4.6.1",
     "@strapi/strapi": "4.5.5",
     "better-sqlite3": "8.0.1",
-    "generate-password": "^1.7.0",
+    "pg": "^8.9.0",
     "recaptcha2": "^1.3.3",
     "strapi-provider-email-mailjet": "^4.0.0"
   },

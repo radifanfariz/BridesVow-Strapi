@@ -105,6 +105,48 @@ module.exports = {
 
       return { types: [updatePemesananByOrderId] };
     });
+    extensionService.use(({ nexus }) => {
+      const checkPemesanan = nexus.extendType({
+        type: 'Query',
+        definition(t) {
+          // "createPemesananByRecaptcha" query definition
+          t.field('checkPemesanan', {
+            // Response type
+            type: nexus.nullable('PemesananEntityResponse'),
+
+            // Args definition
+            args: { identifier: nexus.nonNull('String') },
+
+            // Resolver definition
+            async resolve(parent, args, context) {
+              const { identifier } = args;
+              const {toEntityResponse} = strapi.plugin('graphql').service('format').returnTypes;
+
+              try{
+                const checkpemesananResponse = await strapi.db.query('api::pemesanan.pemesanan').findOne({
+                  where: {
+                    $or: [
+                      {
+                        OrderID: identifier,
+                      },
+                      {
+                        Email: identifier
+                      }
+                    ]
+                  },
+                })
+                console.log(checkpemesananResponse)
+                return toEntityResponse(checkpemesananResponse);
+              }catch(errors){
+                throw new Error(errors)
+              }
+            }
+          });
+        }
+      });
+
+      return { types: [checkPemesanan] };
+    });
 
     // extensionService.use({
     //   resolversConfig: {

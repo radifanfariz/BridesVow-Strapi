@@ -1,18 +1,9 @@
-const generator = require('generate-password');
 const axios = require("axios");
 
 module.exports = {
     async afterUpdate(event) {
 
-        const password = generator.generate({
-            length: 10,
-            numbers: true
-        });
-        // const password = "password007";
-
         const { result } = event
-
-        // console.log(password)
 
         if (result.IsPaid) {
             try {
@@ -27,21 +18,12 @@ module.exports = {
                 //     },
                 // });
                 /*----------------------*/
-                const data = {
-                    username: result.OrderID,
-                    email: result.Email,
-                    password: password,
-                }
-                const response = await axios.post("http://localhost:1338/api/auth/local/register", data);
-
-                console.log(response.data)
-
                 await strapi.plugins.email.services.email.send({
                     to: result.Email,
                     toName: result.Nama,
-                    subject: "BridesVow Account",
-                    text: `This is your BridesVow Account`,
-                    html: emailTemplateHtml(result.Nama, result.Email, result.OrderID, password),
+                    subject: "BridesVow Info",
+                    text: `This is BridesVow Info`,
+                    html: emailTemplateHtml(result.Nama, result.Email, result.OrderID),
                 });
 
                 // await strapi.plugins['email'].services.email.send({
@@ -58,7 +40,7 @@ module.exports = {
     }
 }
 
-const emailTemplateHtml = (nama, email, orderId, password) => `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+const emailTemplateHtml = (nama, email, orderId) => `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html
   xmlns="http://www.w3.org/1999/xhtml"
   xmlns:v="urn:schemas-microsoft-com:vml"
@@ -312,17 +294,12 @@ const emailTemplateHtml = (nama, email, orderId, password) => `<!DOCTYPE html PU
                                       "
                                     >
                                       <multiline>
-                                        Halo 🖐, ini akun BridesVow kamu ! <br />Silahkan
-                                        login menggunakan akun tersebut.
-                                        <br />
-                                        <br />
+                                        Halo 🖐, kami ingin memberitahukan bahwa akun anda 
                                         <strong>OrderID: ${orderId}</strong> /
                                         <strong>Email: ${email}</strong>
-                                        <br />
-                                        <strong>Password: ${password}</strong>
-                                        <br />
-                                        <br />
-                                        Terima kasih sudah memilih BridesVow.com
+                                        telah aktif dan dapat digunakan untuk login ke dashboard.
+                                        <br/> Anda dapat langsung menuju halaman login dengan klik tombol dibawah.
+                                        <br/> Terima kasih sudah memilih BridesVow.com
                                         🤝.
                                       </multiline>
                                     </td>
@@ -415,7 +392,7 @@ const emailTemplateHtml = (nama, email, orderId, password) => `<!DOCTYPE html PU
                             "
                           >
                             <multiline
-                              >BridesVow - Undangan Digital Online
+                              >BridesVow - Platform Undangan Online
                               Premium</multiline
                             >
                           </td>
