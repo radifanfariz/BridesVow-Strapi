@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_faq_faqs",
+  "info": {
+    "displayName": "Faq"
+  },
+  "options": {},
+  "attributes": {
+    "Pertanyaan": {
+      "type": "richtext"
+    },
+    "Jawaban": {
+      "type": "richtext"
+    }
+  }
+}

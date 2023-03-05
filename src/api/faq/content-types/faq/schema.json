@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "Faq",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Kategori": {
+      "type": "enumeration",
+      "enum": [
+        "akun",
+        "order",
+        "dashboard"
+      ],
+      "required": true
+    },
+    "Faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.faq"
+    }
+  }
+}
