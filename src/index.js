@@ -2,6 +2,8 @@
 
 const axios = require('axios');
 
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY
+
 module.exports = {
   /**
    * An asynchronous register function that runs before
@@ -31,7 +33,7 @@ module.exports = {
 
               // validate Recaptcha
               const recaptchaResponse = captchaValue;
-              const recaptchaSecretKey = '6Le05zkkAAAAAGAPgIJkYxUDkpmSQQkShGS5R5hU';
+              const recaptchaSecretKey = RECAPTCHA_SECRET_KEY;
           
               if (!recaptchaResponse) {
                 throw new Error('reCAPTCHA response is missing.');
